@@ -129,14 +129,14 @@ struct projectionconfig * get_projection(const char * srs) {
         prj->bound_y1 = 1400000;
         prj->aspect_x = 1;
         prj->aspect_y = 2;
-    } else if (strcmp(srs, "+proj=eqc +a=6378137.0 +b=6356752.314245179 +units=m +lon_0=150.0") == 0) {
+    } else if (strcmp(srs, "+proj=eqc +a=6378137.0 +b=6356752.314245179 +units=m +lon_0=140.0") == 0) {
 
         syslog(LOG_DEBUG, "CUSTOM PROJECTION!!!");
         prj = (struct projectionconfig *)malloc(sizeof(struct projectionconfig));
-        prj->bound_x0 =  -1447153.380312557;
-        prj->bound_x1 =  1224514.3987260095;
-        prj->bound_y0 =  4452779.631730943;
-        prj->bound_y1 =  7124447.410769508;
+        prj->bound_x0 =  -4452779;
+        prj->bound_x1 =  4452779;
+        prj->bound_y0 =  0;
+        prj->bound_y1 =  8905558;
         prj->aspect_x = 1;
         prj->aspect_y = 1;
     } 
